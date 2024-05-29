@@ -8,7 +8,7 @@ import styles from './layout.module.css';
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-  title: 'Simple Blog',
+  title: 'Point Cloud',
   description: 'A simple blog presented by microCMS',
   openGraph: {
     title: 'Simple Blog',

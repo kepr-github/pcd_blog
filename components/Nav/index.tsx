@@ -9,7 +9,7 @@ type Props = {
 
 export default function Nav({ tags }: Props) {
   return (
-    <nav className={styles.nav}>
+    <nav className="py-20 flex flex-col items-center">
       <SearchField />
       <TagList tags={tags} />
     </nav>
