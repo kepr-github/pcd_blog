@@ -64,3 +64,4 @@ export default function Article({ data }: Props) {
     </main>
   );
 }
+

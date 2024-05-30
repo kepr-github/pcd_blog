@@ -176,19 +176,22 @@
 }
 
 .content > table {
-  width: 100%;
-  margin: 2rem 0;
+  @apply w-full table-fixed border-collapse;
+}
+
+.light-blue-gradient-bg {
+  @apply bg-gradient-to-r from-blue-100 to-blue-200 text-black;
 }
 
 .content > table th {
-  background-color: var(--color-bg-sub);
-  text-align: left;
-  padding: 1rem;
-}
+  @apply p-3 border border-gray-300 text-center light-blue-gradient-bg;
+  }
+
 
 .content > table td {
-  text-align: left;
-  padding: 1rem;
+  @apply p-3 border border-gray-300 text-center;
+  @apply overflow-hidden;
+  @apply  break-words;
 }
 
 @media (max-width: 640px) {

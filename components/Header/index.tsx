@@ -23,36 +23,41 @@ export default function Header() {
   return (
 <header className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 shadow-lg">
   <div className="container mx-auto flex items-center justify-between">
-    <Link href="/">
-      <Image
-        src="/newlogo.png"
-        alt="Point Cloud"
-        className="w-16 h-auto"
-        width={176}
-        height={67}
-        priority
-      />
-    </Link>
+  <div className="flex items-center space-x-4">
+          <Link href="/">
+            <div className="flex items-center space-x-4">
+              <Image
+                src="/newlogo.png"
+                alt="Point Cloud"
+                className="w-16 h-auto"
+                width={176}
+                height={67}
+                priority
+              />
+              <span className="text-white text-2xl font-bold">Point Cloud Media</span>
+            </div>
+          </Link>
+        </div>
     <nav>
       <ul className="flex space-x-8 text-white text-lg">
         <li>
           <Link href="/" className="hover:underline">
-            Hone
+            Home
           </Link>
         </li>
         <li>
           <Link href="/about" className="hover:underline">
-            About
+            Recomend
           </Link>
         </li>
         <li>
           <Link href="/services" className="hover:underline">
-            Services
+            All
           </Link>
         </li>
         <li>
           <Link href="/contact" className="hover:underline">
-            Contact
+            Service
           </Link>
         </li>
       </ul>
