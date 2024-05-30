@@ -45,9 +45,14 @@ export default function Header() {
             Home
           </Link>
         </li>
+        {/* <li>
+          <Link href="/about" className="hover:underline">
+            Pickup
+          </Link>
+        </li>
         <li>
           <Link href="/about" className="hover:underline">
-            Recomend
+            Paper
           </Link>
         </li>
         <li>
@@ -59,7 +64,7 @@ export default function Header() {
           <Link href="/contact" className="hover:underline">
             Service
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   </div>
