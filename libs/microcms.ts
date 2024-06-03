@@ -7,6 +7,24 @@ import type {
 } from 'microcms-js-sdk';
 import { notFound } from 'next/navigation';
 
+
+// const DEBUG_MODE:boolean = true;
+
+// function trace(...args:any[]):void {
+//   if (DEBUG_MODE && window.console && typeof window.console.log != "undefined") {
+//       let str:string = "";
+//       if (args.length > 0)
+//           str = args.join(", ");
+
+//       console.log(str);
+//   }
+// }
+
+
+
+
+
+
 // タグの型定義
 export type Tag = {
   name: string;
@@ -49,6 +67,8 @@ export const client = createClient({
 
 // ブログ一覧を取得
 export const getList = async (queries?: MicroCMSQueries) => {
+  console.log("テスト")
+  console.log(queries)
   const listData = await client
     .getList<Blog>({
       endpoint: 'blog',
@@ -60,6 +80,8 @@ export const getList = async (queries?: MicroCMSQueries) => {
 
 // ブログの詳細を取得
 export const getDetail = async (contentId: string, queries?: MicroCMSQueries) => {
+  console.log("mmsq")
+  console.log(queries)
   const detailData = await client
     .getListDetail<Blog>({
       endpoint: 'blog',
@@ -67,7 +89,8 @@ export const getDetail = async (contentId: string, queries?: MicroCMSQueries) =>
       queries,
     })
     .catch(notFound);
-
+  console.log("詳細")
+  console.log(detailData)
   return detailData;
 };
 

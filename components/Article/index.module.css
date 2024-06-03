@@ -143,8 +143,13 @@
   text-decoration: underline;
 }
 
-.content > figure {
-  margin: 2rem 0;
+.thumbnail,
+.content > figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 40px;
+  object-fit: cover; /* Add this line to maintain aspect ratio */
 }
 
 .content > figure img {
@@ -193,7 +198,7 @@
   @apply overflow-hidden;
   @apply  break-words;
 }
-
+/* 
 @media (max-width: 640px) {
   .title {
     font-size: 2rem;
@@ -238,5 +243,59 @@
 
   .content {
     width: 100%;
+  }
+} */
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+    margin: 24px 0 40px;
+    text-align: center;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+  }
+
+  .writer {
+    padding-right: 24px;
+    margin-right: 24px;
+  }
+
+  .writerIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .writerName {
+    margin-left: 16px;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    object-fit: cover; /* Add this line to maintain aspect ratio */
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content > figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Add this line to maintain aspect ratio */
   }
 }

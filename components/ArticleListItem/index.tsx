@@ -13,9 +13,10 @@ export default function ArticleListItem({ article }: Props) {
 
 return (
   <li className="flex mb-6">
-    <Link href={`/articles/${article.id}`} className="flex items-start hover:shadow-lg transition-shadow">
+    <Link href={`/articles/${article.id}`} className="flex w-full mb-6">
       {article.thumbnail ? (
-        <picture>
+        <div className="w-1/2 h-32 overflow-hidden flex-shrink-0">
+        <picture >
           <source
             type="image/webp"
             media="(max-width: 640px)"
@@ -33,7 +34,9 @@ return (
             height={126}
           />
         </picture>
+        </div>
       ) : (
+        <div className="w-1/2 h-32 overflow-hidden flex-shrink-0">
         <Image
           className="w-60 h-32 object-cover mr-4"
           src="/no-image.png"
@@ -41,8 +44,10 @@ return (
           width={240}
           height={126}
         />
+        </div>
       )}
-      <dl className="flex flex-col justify-between p-4 bg-white">
+
+      <dl className="flex-col justify-between p-4 bg-white">
         <dt className="text-xl font-bold">{article.title}</dt>
         <dd className="mt-2">
           <TagList tags={article.tags} hasLink={false} />
